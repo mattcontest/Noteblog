@@ -26,14 +26,6 @@ function App() {
 
 
 
-
-
-
-
-
-
-
-
   if(!user){
     return(
       <Routes>
