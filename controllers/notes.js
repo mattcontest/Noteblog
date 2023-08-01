@@ -9,7 +9,10 @@ s3 = new S3();
 
 const BUCKET_NAME = process.env.BUCKET_NAME;
 
-// module.exports{};
+module.exports ={
+    create,
+    index
+};
 
 
 function create(req,res){
