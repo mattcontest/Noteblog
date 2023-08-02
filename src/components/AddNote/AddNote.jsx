@@ -4,7 +4,7 @@ import { Button, Form, Grid, Segment } from "semantic-ui-react";
 
 export default function AddNote({handleAddNote}){
     const [state, setState] = useState({
-        note: ''
+        noteTxt: ''
     })
 
     const [selectedFile,setSelectedFile] = useState('');
@@ -23,8 +23,9 @@ export default function AddNote({handleAddNote}){
 
     function handleSubmit(e){
         const formData = new FormData()
-        formData.append('note', state.note)
+        formData.append('noteTxt', state.noteTxt)
         formData.append('photo', selectedFile)
+        console.log(formData.getAll('noteTxt'), "<---- FormData from AddNote")
         handleAddNote(formData);
     }
 
@@ -34,8 +35,8 @@ export default function AddNote({handleAddNote}){
         <Form autoComplete="off" onSubmit={handleSubmit}>
           <Form.Input
             className="form-control"
-            name="note"
-            value={state.note}
+            name="noteTxt"
+            value={state.noteTxt}
             placeholder="What's on your Note?"
             onChange={handleChange}
             required

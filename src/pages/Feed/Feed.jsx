@@ -38,11 +38,12 @@ export default function Feed({user, handleLogout}){
     
     
     async function handleAddNote(data){
-        console.log(data, "Check here from Feed.js")
         try {
             const responseData = await notesApi.create(data);
+            console.log(responseData, "<---Response from server handleAddNote, Check here from Feed.js")
             setNotes([responseData.data, ...notes])
             console.log(responseData, "<-- Response from server in handleAddPost from Feed.js")
+            console.log(notes, "<--- Notes")
         } catch (err) {
             console.log(err, "Problem in handleAddNote from Feed.js")
             setError("Problem in handleAddNote from Feed.js");
@@ -81,8 +82,8 @@ export default function Feed({user, handleLogout}){
       </Grid.Column>
     </Grid.Row>
     <Grid.Row>
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <PostGallery notes={notes} itemsPerRow={1} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
+      <Grid.Column style={{ maxWidth: 1050 }}>
+        <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
       </Grid.Column>
     </Grid.Row>
   </Grid>

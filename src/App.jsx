@@ -42,7 +42,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Feed user={user} handleSignUpOrLogin={handleSignUpOrLogin}/>} />
+      <Route path="/" element={<Feed user={user} handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout}/>} />
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>}/>
       <Route path="/*" element={<Navigate to="/"/>}/>

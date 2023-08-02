@@ -11,7 +11,9 @@ export function create(data){
             Authorization: 'Bearer ' + tokenService.getToken()
         }
     }).then(responseFromTheServer => {
-        if(responseFromTheServer.ok) return responseFromTheServer.json();
+        console.log(responseFromTheServer, "Response from the server notesApi")
+        if(responseFromTheServer.ok) 
+         return responseFromTheServer.json();
         //if the responseFromTheServer is succesfull a JSON response will be returned
         //Otherwise throw a new error
         throw new Error('Somethin went wrong in creaing the Note @ noteApi')

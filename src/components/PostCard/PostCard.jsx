@@ -38,7 +38,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
   
         <Image src={`${note.photoUrl}`} wrapped ui={false} />
         <Card.Content>
-          <Card.Description>{note.note}</Card.Description>
+          <Card.Description>{note.noteTxt}</Card.Description>
         </Card.Content>
         <Card.Content extra textAlign={"right"}>
           <Icon name={"heart"} size="large" color={notedColor} onClick={clickHandler } />

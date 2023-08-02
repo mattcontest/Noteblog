@@ -9,7 +9,7 @@ export default function NoteHeader({handleLogout, user}){
           <Link to="/">
             <Icon name="home"></Icon>
           </Link>
-          <Link to="" onClick={handleLogout}>
+          <Link to="/" onClick={handleLogout}>
             Logout
           </Link>
         </Header>

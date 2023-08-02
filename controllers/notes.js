@@ -32,12 +32,12 @@ function create(req,res){
 
         try {
             const note = await Note.create({
-                caption: req.body.caption,
+                noteTxt: req.body.noteTxt,
                 user: req.user, //We get the info from the JWT token
                 photoUrl: data.Location, //data.Location is returned by AWS S3 upload
             });
 
-            await post.populate("user");// Needed to pouplate a mongoose document
+            await note.populate("user");// Needed to pouplate a mongoose document
             res.status(201).json({data: note});
         } catch (err) {
             res.status(400).json({error: err});
