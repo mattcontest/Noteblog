@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { Grid } from "semantic-ui-react";
-import Header from "../../components/Header/Header"
+// import Header from "../../components/Header/Header"
 import * as notesApi from "../../utils/noteApi"
 import * as notedApi from "../../utils/notedApi"
 import NoteHeader from "../../components/Header/Header";

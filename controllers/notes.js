@@ -40,7 +40,7 @@ function create(req,res){
             await post.populate("user");// Needed to pouplate a mongoose document
             res.status(201).json({data: note});
         } catch (err) {
-            req.status(400).json({error: err});
+            res.status(400).json({error: err});
         }
     });
 }
