@@ -42,14 +42,16 @@ export default function SignupPage({handleSignUpOrLogin}){
 
     async function handleSumbit(e){
         e.preventDefault();
+        console.log(state, "Checking the State");
         //We are creating the formdata required for sending file to the server
         //The HTTP request will be sent in two parts, (1) text (2) filePicture
         const formData = new FormData();
         formData.append('photo', selectedFile);
         formData.append('username', state.username);
-        formData.append('email', state.username);
+        formData.append('email', state.email);
         formData.append('password', state.password);
         formData.append('bio', state.bio);
+        console.log(formData, "CHECKING FORMDATA");
 
         try {
             //Making fetch request to the server and sending our state object
@@ -73,13 +75,13 @@ export default function SignupPage({handleSignUpOrLogin}){
            <Header as="h2" color="purple" textAlign="center">
             <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> Sign Up
           </Header>
-          <Form autoComplete="off" >
+          <Form autoComplete="off" onSubmit={handleSumbit} >
             <Segment stacked>
               <Form.Input
                 name="username"
                 placeholder="username"
                 value={state.username}
-                // onChange={handleChange}
+                onChange={handleChange}
                 required
               />
               <Form.Input
@@ -87,7 +89,7 @@ export default function SignupPage({handleSignUpOrLogin}){
                 name="email"
                 placeholder="email"
                 value={state.email}
-                // onChange={handleChange}
+                onChange={handleChange}
                 required
               />
               <Form.Input
@@ -95,7 +97,7 @@ export default function SignupPage({handleSignUpOrLogin}){
                 type="password"
                 placeholder="password"
                 value={state.password}
-                // onChange={handleChange}
+                onChange={handleChange}
                 required
               />
               <Form.Input
@@ -103,7 +105,7 @@ export default function SignupPage({handleSignUpOrLogin}){
                 type="password"
                 placeholder="Confirm Password"
                 value={state.passwordConf}
-                // onChange={handleChange}
+                onChange={handleChange}
                 required
               />
               <Form.TextArea
@@ -111,7 +113,7 @@ export default function SignupPage({handleSignUpOrLogin}){
                 name="bio"
                 placeholder="Notes that define you"
                 value={state.bio}
-                // onChange={handleChange}
+                onChange={handleChange}
               />
               <Form.Field>
                 <Form.Input

@@ -18,7 +18,7 @@ module.exports ={
 function create(req,res){
     console.log(req.body, req.file, "< req.body, req.file in routes/api/notes");
     if(!req.file) return res.status(400).json({error: "Need to submit a Photo"});
-    const filePath = `noteblog/posts/${uuidv4()}-${req.file.originalname}`;
+    const filePath = `noteblog/notes/${uuidv4()}-${req.file.originalname}`;
     const params = { Bucket: BUCKET_NAME, Key: filePath, Body: req.file.buffer};
 
     s3.upload(params, async function (err,data){

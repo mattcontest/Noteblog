@@ -51,10 +51,11 @@ export default function LoginPage({handleSignUpOrLogin}){
           <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> 
         </Header>
         <Form size='large' autoComplete="off" onSubmit={handleSubmit}>
-          <Segment stacked>
+          <Segment stacked> 
             <Form.Input 
             fluid icon='user'
              iconPosition='left'
+             name='email'
              placeholder='email'
              value={state.email} 
              onChange={handleChange}
@@ -64,6 +65,7 @@ export default function LoginPage({handleSignUpOrLogin}){
               icon='lock'
               iconPosition='left'
               placeholder='Password'
+              name='password'
               value={state.password}
               type='password'
               onChange={handleChange}
@@ -75,7 +77,7 @@ export default function LoginPage({handleSignUpOrLogin}){
           </Segment>
         </Form>
         <Message>
-          New to Noteblog? <a href='#'>Sign Up</a>
+          New to Noteblog? <Link to="/signup">Sign up</Link>
         </Message>
       </Grid.Column>
     </Grid>

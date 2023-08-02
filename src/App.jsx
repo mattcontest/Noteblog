@@ -3,8 +3,10 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import Feed from "./pages/Feed/Feed";
 import { useState } from "react";
 import userService from "./utils/userService";
+
 
 function App() {
 
@@ -40,9 +42,10 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<h1>Home Pageeeeeeeeeee</h1>} />
+      <Route path="/" element={<Feed user={user} handleSignUpOrLogin={handleSignUpOrLogin}/>} />
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>}/>
+      <Route path="/*" element={<Navigate to="/"/>}/>
     </Routes>
   );
 }

@@ -10,7 +10,7 @@ const notedSchema = mongoose.Schema({
 const noteSchema = new mongoose.Schema({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     photoUrl: String,
-    caption: String,
+    note: String,
     noted: [notedSchema]
 })
 
