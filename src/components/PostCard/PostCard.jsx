@@ -11,11 +11,11 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
 
     //if the user has noted one's note, the notedIndex would be greater than 1 so the color should be orange
 
-    const notedColor = notedIndex > 1 ? 'purple' : 'black'
+    const notedColor = notedIndex > -1 ? 'purple' : 'black'
 
     //if the user has noted a post, we need to remove the noted status from it.
     //Vice versa, if the user has not noted a post and clicked on it, we then have to call our noted function
-    const clickHandler = notedIndex > 1 ? () => removeNoted(note.noted[notedIndex]._id) : () => noted(note._id);
+    const clickHandler = notedIndex > -1 ? () => removeNoted(note.noted[notedIndex]._id) : () => noted(note._id);
 
 
     return(

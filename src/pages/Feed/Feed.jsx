@@ -15,7 +15,7 @@ export default function Feed({user, handleLogout}){
 
     async function noted(noteId){
         try {
-            const response = await notesApi.create(noteId);
+            const response = await notedApi.create(noteId);
             getNotes();
 
         } catch (err) {

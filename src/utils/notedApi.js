@@ -17,6 +17,7 @@ export function create(noteId){
 
 
 export function removeNoted(notedId){
+    console.log(notedId, " <--- notedId")
     return fetch(`${BASE_URL}notes/${notedId}`, {
         method: 'DELETE',
         headers: {

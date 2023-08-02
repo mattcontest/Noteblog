@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export default function NoteHeader({handleLogout, user}){
+  console.log(user, "Checking the user from Header");
     return(
         <Segment clearing>
         <Header as="h2" floated="right">
