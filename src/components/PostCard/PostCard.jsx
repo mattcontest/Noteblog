@@ -11,7 +11,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
 
     //if the user has noted one's note, the notedIndex would be greater than 1 so the color should be orange
 
-    const notedColor = notedIndex > 1 ? 'orange' : 'green'
+    const notedColor = notedIndex > 1 ? 'purple' : 'black'
 
     //if the user has noted a post, we need to remove the noted status from it.
     //Vice versa, if the user has not noted a post and clicked on it, we then have to call our noted function
@@ -38,11 +38,11 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
   
         <Image src={`${note.photoUrl}`} wrapped ui={false} />
         <Card.Content>
-          <Card.Description>{note.caption}</Card.Description>
+          <Card.Description>{note.note}</Card.Description>
         </Card.Content>
         <Card.Content extra textAlign={"right"}>
           <Icon name={"heart"} size="large" color={notedColor} onClick={clickHandler } />
-          {note.likes.length} Likes
+          {note.noted.length} Likes
         </Card.Content>
       </Card>
 
