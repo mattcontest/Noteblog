@@ -6,6 +6,8 @@
 
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@200&family=Readex+Pro:wght@500&display=swap');
+
 
 .center > div:nth-child(1) {
     /*! margin-left: 192px; */display: flex;
@@ -22,3 +24,21 @@
     
    }
    
+
+   #logo_btn > a:nth-child(1) {
+    /* width: 1641px; */
+    width: auto;
+    border: solid seashell;
+    display: flex;
+    justify-content: center;
+   }
+   
+
+
+   #logo {
+    border:solid transparent;
+    margin-top: 15px;
+    font-size: 51px;
+    margin-left: -54px;
+    font-family: 'Readex Pro', sans-serif;
+   }

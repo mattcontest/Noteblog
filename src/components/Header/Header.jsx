@@ -76,18 +76,19 @@ export default class NoteHeader extends Component {
           onClick={this.handleItemClick}
         />
 
-        <Menu.Menu position='center'>
-          
-          <Menu.Item>
-          <Link to={`/${user?.username}`}>
-            <Button>Noteblog</Button>
+
+        <Menu.Menu className='right menu'>
+        <Link to={`/${user?.username}`}>
+            <h1 id="logo">Noteblog</h1>
           </Link>
-          </Menu.Item>
-        </Menu.Menu>
+          
+           </Menu.Menu>
 
 
 
         <Menu.Menu position='right'>
+
+
           
           <Menu.Item>
             <Button primary onClick={handleLogout}>Log out</Button>
