@@ -2,7 +2,7 @@ import { useState } from 'react'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import userService from '../../utils/userService';
 import { useNavigate } from 'react-router-dom';
-
+import "./SignupPage.css"
 import {
 	Button,
 	Form,
@@ -71,12 +71,13 @@ export default function SignupPage({handleSignUpOrLogin}){
 
     return(
         <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
-        <Grid.Column style={{ maxWidth: 450 }}>
+        <Grid.Column style={{ maxWidth: 450 }} id="grid_col">
            <Header as="h2" color="purple" textAlign="center">
-            <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> Sign Up
+          <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> <p>Noteblog</p>
+            
           </Header>
-          <Form autoComplete="off" onSubmit={handleSumbit} >
-            <Segment stacked>
+          <Form autoComplete="off" onSubmit={handleSumbit} id="form_signup" >
+            <Segment stacked id="form_signup">
               <Form.Input
                 name="username"
                 placeholder="username"

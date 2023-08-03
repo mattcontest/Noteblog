@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@200&family=Readex+Pro:wght@500&display=swap');
+
+
+p{
+    font-family: 'Readex Pro', sans-serif;
+    font-size:xx-large
+}
+
+/* div.center {
+    height: 100vh;
+    background: aliceblue;
+   }
+    */
+
+   /* .stacked {
+       border-radius: 19px;
+    }
+     */
+    /* .form_signup{
+        border: solid rgb(112, 69, 37) !important;
+   }
+    */
+
+   /* .column {
+    max-width: 450px;
+    border: solid gainsboro;
+    padding: 10px;
+   }
+    */
+
+    .grid_col{
+        border: solid navy;
+    }
+
+
+    #form_signup{
+    background-color: antiquewhite;
+    border: solid seashell;
+    border-radius: 25px;
+    }

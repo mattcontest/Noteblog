@@ -70,11 +70,21 @@ export default class NoteHeader extends Component {
             </Menu.Item>
 
 
-        <Menu.Item
+        {/* <Menu.Item
           name='messages'
           // active={activeItem === 'messages'}
           onClick={this.handleItemClick}
-        />
+        /> */}
+
+    <Menu.Item className='my_notes'>
+        <Link to={`/${user?.username}`}>
+            <h1 id="mynotes">@</h1>
+          </Link>
+          
+           </Menu.Item>
+
+
+
 
 
         <Menu.Menu className='right menu'>
