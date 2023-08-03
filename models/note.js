@@ -12,7 +12,10 @@ const noteSchema = new mongoose.Schema({
     photoUrl: String,
     noteTxt: String,
     noted: [notedSchema]
-})
+},{
+    timestamps: true,
+  }
+)
 
 
 module.exports = mongoose.model('Note', noteSchema);

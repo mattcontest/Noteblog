@@ -25,7 +25,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
 
         <Card.Content>
           {/* <Card.Header floated="right">{note.user.username}</Card.Header> */}
-          {/* <Card.Meta>Joined in 2016</Card.Meta> */}
+          <Card.Meta>Posted: { new Date(note.createdAt).toLocaleDateString()}</Card.Meta>
          
         </Card.Content>
         <Image src={`${note.photoUrl}`} wrapped ui={false}  className="NoteImg"  />
@@ -42,17 +42,6 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
         {/* </Card.Content> */}
         {isProfile ? null : (
           <Card.Content textAlign="left">
-            {/* <Image
-              floated="left"
-              size="large"
-              avatar
-              src={
-                note.user.photoUrl
-                  ? note.user.photoUrl
-                  : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-              }
-            />
-            <Card.Header floated="right">@{note.user.username}</Card.Header> */}
 
           </Card.Content>
         )}
