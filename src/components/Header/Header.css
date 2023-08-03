@@ -1,0 +1,24 @@
+/* #avatar{
+    height: 50px !important;
+    width: 50px !important;
+    border: solid maroon;
+    border-radius: 30px;
+
+} */
+
+
+.center > div:nth-child(1) {
+    /*! margin-left: 192px; */display: flex;
+    justify-content: center;
+    width: 1378px;
+   }
+   
+
+  .massive > div:nth-child(1) > a:nth-child(1) > img:nth-child(1) {
+    height: 70px;
+    width: 70px;
+    border: solid gainsboro;
+    border-width: 4px;
+    
+   }
+   
