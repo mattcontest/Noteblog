@@ -1,7 +1,28 @@
 #login_btn{
-    border:solid seagreen;
+    border:solid rgb(236, 188, 105);
     border-radius: 20px;
     width: 250px;
     margin-left: 75px;
     background-color:maroon;
 }
+
+
+/* .stacked {
+    background: floralwhite !important;
+   } */
+   
+   div.ui:nth-child(3) {
+    border: solid gold;
+    border-radius: 19px;
+    border-style: inset;
+   }
+   
+
+   .stacked {
+    background: floralwhite !important;
+    border: solid honeydew !important;
+    border-radius: 20px !important;
+    border-style: inset !important;
+    border-width: 7px !important;
+   }
+   
