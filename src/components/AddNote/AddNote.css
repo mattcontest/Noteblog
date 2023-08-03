@@ -1,0 +1,31 @@
+
+.segment_add{
+    border: solid transparent !important;
+    background-color: seashell !important;
+    padding: 12px;
+    border-radius: 19px !important;
+
+}
+.add_note{
+    border:solid seashell;
+    border-radius: 19px;
+    /* background-color: seashell !important; */
+}
+
+.mail_btn{
+    margin-left: 341px !important;
+    margin-top: -14px !important;
+}
+
+
+
+.required > div:nth-child(1) > input:nth-child(1) {
+    border: solid seashell;
+    border-radius: 25px;
+   }
+   
+div.field:nth-child(2) > div:nth-child(1) > input:nth-child(1) {
+    border: solid seashell;
+    border-radius: 25px;
+   }
+   

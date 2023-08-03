@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Button, Form, Grid, Segment } from "semantic-ui-react";
-
+import { Button, Form, Grid, Segment, Icon } from "semantic-ui-react";
+import "./AddNote.css"
 
 export default function AddNote({handleAddNote}){
     const [state, setState] = useState({
@@ -31,8 +31,10 @@ export default function AddNote({handleAddNote}){
 
 
     return(
-        <Segment>
-        <Form autoComplete="off" onSubmit={handleSubmit}>
+        <Segment className="segment_add" >
+          <Icon name={"sticky note outline"} size="huge" className="mail_btn"/>
+
+        <Form autoComplete="off" onSubmit={handleSubmit} className="add_note">
           <Form.Input
             className="form-control"
             name="noteTxt"

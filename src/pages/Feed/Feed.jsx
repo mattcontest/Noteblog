@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Feed.css"
 
 import { Grid } from "semantic-ui-react";
 // import Header from "../../components/Header/Header"
@@ -70,13 +71,13 @@ export default function Feed({user, handleLogout}){
     
     
     return(
-        <Grid centered>
-    <Grid.Row>
+        <Grid centered >
+    <Grid.Row className="grid_bg">
       <Grid.Column>
         <NoteHeader handleLogout={handleLogout} user={user}/>
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row>
+    <Grid.Row className="grid_bg">
       <Grid.Column style={{ maxWidth: 450 }}>
         <AddNote handleAddNote={handleAddNote} />
       </Grid.Column>
