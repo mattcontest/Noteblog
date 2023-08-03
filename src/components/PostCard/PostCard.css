@@ -1,0 +1,43 @@
+.NoteImg {
+    width: 240px; 
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .NoteImg img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
+
+.profile{
+    height: 20px !important;
+    width: 20px  !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* object-fit: cover; */
+}
+
+.bottom_info{
+    /* border: solid; */
+    display: flex;
+    /* align-items: center; */
+    width: 227px;
+    height: 38px;
+    border-radius: 20px;
+    margin-left: -6px;
+    justify-content: space-between;
+}
+
+.extra_space{
+    border: solid;
+    display: flex;
+    /* height: 20px; */;
+    margin-bottom: 20px;
+}

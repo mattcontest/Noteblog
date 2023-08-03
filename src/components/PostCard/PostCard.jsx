@@ -1,4 +1,5 @@
 import { Card, Icon, Image } from "semantic-ui-react";
+import './PostCard.css'
 
 
 export default function PostCard({ note, isProfile, noted, removeNoted, user}){
@@ -19,10 +20,29 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
 
 
     return(
+
         <Card key={note._id}>
+
+        <Card.Content>
+          {/* <Card.Header floated="right">{note.user.username}</Card.Header> */}
+          {/* <Card.Meta>Joined in 2016</Card.Meta> */}
+         
+        </Card.Content>
+        <Image src={`${note.photoUrl}`} wrapped ui={false}  className="NoteImg"  />
+
+        <Card.Content extra className="extra_space">
+        <Card.Description>
+            {note.noteTxt}
+          </Card.Description>
+        </Card.Content>
+        {/* <Card.Content extra textAlign={"right"}>
+          <Icon name={"sticky note"} size="large" color={notedColor} onClick={clickHandler } />
+          {note.noted.length} Likes
+        </Card.Content> */}
+        {/* </Card.Content> */}
         {isProfile ? null : (
           <Card.Content textAlign="left">
-            <Image
+            {/* <Image
               floated="left"
               size="large"
               avatar
@@ -32,19 +52,74 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
                   : "https://react.semantic-ui.com/images/wireframe/square-image.png"
               }
             />
-            <Card.Header floated="right">{note.user.username}</Card.Header>
+            <Card.Header floated="right">@{note.user.username}</Card.Header> */}
+
           </Card.Content>
         )}
-  
-        <Image src={`${note.photoUrl}`} wrapped ui={false} />
-        <Card.Content>
-          <Card.Description>{note.noteTxt}</Card.Description>
-        </Card.Content>
-        <Card.Content extra textAlign={"right"}>
-          <Icon name={"heart"} size="large" color={notedColor} onClick={clickHandler } />
-          {note.noted.length} Likes
+         <Card.Content extra textAlign={"left"} >
+
+         
+            <Card.Content floated="right" className="bottom_info">
+
+            <Image
+              floated="left"
+              size="large"
+              avatar
+              src={
+                  note.user.photoUrl
+                  ? note.user.photoUrl
+                  : "https://react.semantic-ui.com/images/wireframe/square-image.png"
+                }
+            />
+            <Card.Content>
+            By @<b>{note.user.username}</b>
+
+            </Card.Content>
+
+            <Card.Content>
+            </Card.Content>
+            <Card.Content>
+
+            <Icon name={"sticky note"} size="large" color={notedColor} onClick={clickHandler } />
+            {note.noted.length}    
+            </Card.Content>
+
+            </Card.Content>
+       
         </Card.Content>
       </Card>
+
+
+
+
+    //     <Card key={note._id}>
+        
+  
+    //     <Image src={`${note.photoUrl}`} wrapped ui={false} className="NoteImg" />
+    //     <Card.Content>
+    //       <Card.Description>{note.noteTxt}</Card.Description>
+    //     </Card.Content>
+    //     <Card.Content extra textAlign={"right"}>
+    //       <Icon name={"sticky note"} size="large" color={notedColor} onClick={clickHandler } />
+    //       {note.noted.length} Likes
+    //     </Card.Content>
+
+        // {isProfile ? null : (
+        //   <Card.Content textAlign="left">
+        //     <Image
+        //       floated="left"
+        //       size="large"
+        //       avatar
+        //       src={
+        //         note.user.photoUrl
+        //           ? note.user.photoUrl
+        //           : "https://react.semantic-ui.com/images/wireframe/square-image.png"
+        //       }
+        //     />
+        //     <Card.Header floated="right">{note.user.username}</Card.Header>
+        //   </Card.Content>
+        // )}
+    //   </Card>
 
     );
 
