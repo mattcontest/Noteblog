@@ -3,30 +3,10 @@
 
 p{
     font-family: 'Readex Pro', sans-serif;
-    font-size:xx-large
+    font-size:xxx-large;
+    color: oldlace;
 }
 
-/* div.center {
-    height: 100vh;
-    background: aliceblue;
-   }
-    */
-
-   /* .stacked {
-       border-radius: 19px;
-    }
-     */
-    /* .form_signup{
-        border: solid rgb(112, 69, 37) !important;
-   }
-    */
-
-   /* .column {
-    max-width: 450px;
-    border: solid gainsboro;
-    padding: 10px;
-   }
-    */
 
     .grid_col{
         border: solid navy;
@@ -38,3 +18,40 @@ p{
     border: solid seashell;
     border-radius: 25px;
     }
+
+    div.center {
+        height: 100vh;
+        background: dimgrey;
+        background-image: url("https://cdn.pixabay.com/photo/2021/06/24/11/18/background-6360865_1280.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+       }
+       
+
+    i.icons .icon {
+        position:absolute;
+        top:60%  !important;
+        left:7% !important;
+        transform:translateX(-50%) translateY(-50%);
+        margin:0;
+        margin:0
+       }
+       
+
+
+       /* .ui.form input:not([type]),
+       .ui.form input[type=date],
+       .ui.form input[type=datetime-local],
+       .ui.form input[type=email],
+       .ui.form input[type=file],
+       .ui.form input[type=number],
+       .ui.form input[type=password],
+       .ui.form input[type=search],
+       .ui.form input[type=tel],
+       .ui.form input[type=text],
+       .ui.form input[type=time],
+       .ui.form input[type=url] {
+        font-size:18px;
+       }
+        */

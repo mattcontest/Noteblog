@@ -11,6 +11,7 @@ import {
 	Image,
 	Message,
 	Segment,
+  Icon
   } from "semantic-ui-react";
 
 
@@ -73,14 +74,20 @@ export default function SignupPage({handleSignUpOrLogin}){
         <Grid textAlign="center" style={{ height: "100vh" }} verticalAlign="middle">
         <Grid.Column style={{ maxWidth: 450 }} id="grid_col">
            <Header as="h2" color="purple" textAlign="center">
-          <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> <p>Noteblog</p>
-            
+          {/* <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> <p>Noteblog</p> */}
+          <p>Noteblog</p>
+
           </Header>
           <Form autoComplete="off" onSubmit={handleSumbit} id="form_signup" >
             <Segment stacked id="form_signup">
+              <Icon.Group size='big'> 
+            <Icon loading size='big' name={"circle notch"}   className="mail_btn"/>
+            <Icon name={'user'} className='mail_btn'/>
+              </Icon.Group>
+
               <Form.Input
                 name="username"
-                placeholder="username"
+                placeholder="@username"
                 value={state.username}
                 onChange={handleChange}
                 required
@@ -88,7 +95,7 @@ export default function SignupPage({handleSignUpOrLogin}){
               <Form.Input
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder= "email"
                 value={state.email}
                 onChange={handleChange}
                 required

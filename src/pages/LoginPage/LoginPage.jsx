@@ -48,7 +48,9 @@ export default function LoginPage({handleSignUpOrLogin}){
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as='h2' color='teal' textAlign='center'>
-          <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" /> 
+          {/* <Image src="https://icons.iconarchive.com/icons/raindropmemory/in-spirited-we-love/128/Note-icon.png" />  */}
+          <p>Noteblog</p>
+
         </Header>
         <Form size='large' autoComplete="off" onSubmit={handleSubmit}>
           <Segment stacked> 
@@ -71,7 +73,7 @@ export default function LoginPage({handleSignUpOrLogin}){
               onChange={handleChange}
             />
   
-            <Button color='teal' fluid size='large'>
+            <Button color='teal' fluid size='large' id="login_btn">
               Login
             </Button>
           </Segment>
