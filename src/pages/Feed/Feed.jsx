@@ -82,7 +82,7 @@ export default function Feed({user, handleLogout}){
         <AddNote handleAddNote={handleAddNote} />
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row>
+    <Grid.Row className="main_body">
       <Grid.Column style={{ maxWidth: 1050 }}>
         <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
       </Grid.Column>
