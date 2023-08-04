@@ -37,3 +37,17 @@ export function create(data){
         })
     }
 
+  //Delete function
+    export function removeNote(noteId){
+        console.log(noteId, " <--- notedId")
+        return fetch(`${BASE_URL}${noteId}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: "Bearer " + tokenService.getToken()
+    
+            }
+        }).then(responseFromTheServer => {
+            if(responseFromTheServer.ok) return responseFromTheServer.json();
+            throw new Error("Something went wrong while trying to remove Noted from this note")
+        })
+    }

@@ -11,7 +11,8 @@ const BUCKET_NAME = process.env.BUCKET_NAME;
 
 module.exports ={
     create,
-    index
+    index,
+    removeNote
 };
 
 
@@ -56,4 +57,21 @@ async function index(req, res){
     }
 }
 
+
+  //Delete function
+async function removeNote(req,res){
+    try {
+        const note = await Note.findOne({'_id' : req.params.id, "note.username" : req.user.username})
+        if(note){
+            note.remove(req.params.id);
+            await note.save();
+            res.json({data:"Remove note from Notes"})
+        }else{
+            res.status(404).json({error: "Not not found"});
+        }
+
+    } catch (err) {
+        res.status(400).json({err})
+    }
+}
 

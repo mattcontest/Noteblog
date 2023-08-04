@@ -3,7 +3,7 @@ import "./Feed.css"
 
 import { Grid } from "semantic-ui-react";
 // import Header from "../../components/Header/Header"
-import * as notesApi from "../../utils/noteApi"
+import * as noteApi from "../../utils/noteApi"
 import * as notedApi from "../../utils/notedApi"
 import NoteHeader from "../../components/Header/Header";
 import AddNote from "../../components/AddNote/AddNote";
@@ -26,6 +26,17 @@ export default function Feed({user, handleLogout}){
         }
     }
 
+    async function removeNote(noteId){
+        try {
+            const response = await noteApi.removeNote(noteId);
+            getNotes();
+        } catch (err) {
+            setError("Error in Removing note");
+            console.log(err, "error")
+            
+        }
+    }
+
 
     async function removeNoted(notedId){
         try {
@@ -40,7 +51,7 @@ export default function Feed({user, handleLogout}){
     
     async function handleAddNote(data){
         try {
-            const responseData = await notesApi.create(data);
+            const responseData = await noteApi.create(data);
             console.log(responseData, "<---Response from server handleAddNote, Check here from Feed.js")
             setNotes([responseData.data, ...notes])
             console.log(responseData, "<-- Response from server in handleAddPost from Feed.js")
@@ -55,7 +66,7 @@ export default function Feed({user, handleLogout}){
     
     async function getNotes(){
         try {
-            const responseFromTheServer = await notesApi.getAll();
+            const responseFromTheServer = await noteApi.getAll();
             console.log(responseFromTheServer);
             // setNotes(responseFromTheServer.notes)
             setNotes(responseFromTheServer.notes)
@@ -85,7 +96,7 @@ export default function Feed({user, handleLogout}){
         </Grid.Row>
         <Grid.Row className="main_body">
           <Grid.Column style={{ maxWidth: 1050 }}>
-            <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
+            <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} removeNote={removeNote} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

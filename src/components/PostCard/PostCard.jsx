@@ -1,13 +1,19 @@
 import { Card, Icon, Image } from "semantic-ui-react";
 import './PostCard.css'
+import { removeNote } from "../../utils/noteApi";
 
 
-export default function PostCard({ note, isProfile, noted, removeNoted, user}){
+export default function PostCard({ note, isProfile, noted, removeNoted, user, removeNote}){
 
     //Check if the user has noted a specific Note
     const notedIndex = note.noted.findIndex(note => note.username === user.username);
     //If the user's username is in the noted list of the array post, its index would be returned.
     //If the username is not inside the noted list, then a -1 would be returned
+  
+    //Delete function
+    const noteIndex = note._id;
+
+    console.log(noteIndex, "<---- noteIndex");
 
 
     //if the user has noted one's note, the notedIndex would be greater than 1 so the color should be orange
@@ -17,6 +23,8 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
     //if the user has noted a post, we need to remove the noted status from it.
     //Vice versa, if the user has not noted a post and clicked on it, we then have to call our noted function
     const clickHandler = notedIndex > -1 ? () => removeNoted(note.noted[notedIndex]._id) : () => noted(note._id);
+    //Delete function
+    const clickRemove =  () => removeNote(note._id);
 
 
     return(
@@ -26,6 +34,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user}){
         <Card.Content>
           {/* <Card.Header floated="right">{note.user.username}</Card.Header> */}
           <Card.Meta>Posted: { new Date(note.createdAt).toLocaleDateString()}</Card.Meta>
+          <button onClick={clickRemove}>Delete</button>
          
         </Card.Content>
         <Image src={`${note.photoUrl}`} wrapped ui={false}  className="NoteImg"  />
