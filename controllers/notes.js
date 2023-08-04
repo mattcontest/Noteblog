@@ -46,9 +46,10 @@ function create(req,res){
 }
 
 async function index(req, res){
+    console.log("Is it reached?")
     try {
         // This populates the user when you find the notes
-        const notes = await Note.find({}).populate("user").exec();
+        const notes = await Note.find({}).sort({createdAt: -1}).populate("user").exec();
         res.status(200).json({notes})
     } catch (err) {
         

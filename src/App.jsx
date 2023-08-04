@@ -6,6 +6,7 @@ import SignupPage from "./pages/SignupPage/SignupPage";
 import Feed from "./pages/Feed/Feed";
 import { useState } from "react";
 import userService from "./utils/userService";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <Route path="/" element={<Feed user={user} handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout}/>} />
       <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
       <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>}/>
+      <Route path="/:username" element={<ProfilePage user={user} handleLogout={handleLogout} />}/>
       <Route path="/*" element={<Navigate to="/"/>}/>
     </Routes>
   );

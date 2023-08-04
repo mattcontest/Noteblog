@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Note = require('../models/note')
 const jwt = require('jsonwebtoken');
 const {v4: uuidv4} = require("uuid");
 //Importing  S3 Constructor
@@ -13,7 +14,8 @@ const BUCKET_NAME = process.env.BUCKET_NAME;
 
 module.exports = {
   signup,
-  login
+  login,
+  profile
 };
 
 async function signup(req, res) {
@@ -86,6 +88,23 @@ async function login(req, res) {
     });
   } catch (err) {
     return res.status(401).json(err);
+  }
+}
+
+
+
+async function profile(req,res){
+  try {
+    const user = await User.findOne({username: req.params.username})
+    if(!user) return res.status(404).json({error: "User not found"});
+
+    const notes = await Note.find({user: user._id}).populate("user").exec();
+    console.log(notes, "These are the notes retrieved")
+    res.status(200).json({notes: notes, user: user})
+  } catch (err) {
+    console.log(err);
+    res.status(400).json({err})
+    
   }
 }
 

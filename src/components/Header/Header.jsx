@@ -55,7 +55,9 @@ export default class NoteHeader extends Component {
       <Menu size='massive'>
         <Menu.Item
           name='home'>
-             <Link to={`/${user?.username}`}>
+             {/* <Link to={`/${user?.username}`}> */}
+             <Link to="/">
+
             <Image id='avatar'
               src={
                 user?.photoUrl
@@ -70,11 +72,7 @@ export default class NoteHeader extends Component {
             </Menu.Item>
 
 
-        {/* <Menu.Item
-          name='messages'
-          // active={activeItem === 'messages'}
-          onClick={this.handleItemClick}
-        /> */}
+
 
     <Menu.Item className='my_notes'>
         <Link to={`/${user?.username}`}>
@@ -88,7 +86,7 @@ export default class NoteHeader extends Component {
 
 
         <Menu.Menu className='right menu'>
-        <Link to={`/${user?.username}`}>
+        <Link to="/">
             <h1 id="logo">Noteblog</h1>
           </Link>
           
