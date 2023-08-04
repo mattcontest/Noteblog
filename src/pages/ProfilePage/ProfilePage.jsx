@@ -104,6 +104,7 @@ export default function ProfilePage({user, handleLogout}){
       </Grid.Row>
       <Grid.Row className="grid_b">
         <Grid.Column style={{ maxWidth: 450 }}>
+          <ProfileBio user={userState}/>
 
         </Grid.Column>
       </Grid.Row>
