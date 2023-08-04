@@ -5,9 +5,11 @@ import ProfileBio from "../../components/ProfileBio/ProfileBio"
 import PostGallery from "../../components/PostGallery/PostGallery";
 import Header from "../../components/Header/Header"
 
+
 import userService from "../../utils/userService";
 
 import * as notedApi from "../../utils/notedApi";
+import NoteHeader from "../../components/Header/Header";
 
 export default function ProfilePage({user, handleLogout}){
     const [notes, setNotes] = useState([]);
@@ -75,25 +77,43 @@ export default function ProfilePage({user, handleLogout}){
 
 
     return (
-        <Grid>
-          <Grid.Row>
-            <Grid.Column>
-              <Header handleLogout={handleLogout} user={user}/>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              <ProfileBio user={userState} />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row centered>
-            <Grid.Column style={{ maxWidth: 750 }}>
-              <PostGallery notes={notes} itemsPerRow={3} isProfile={true} user={user} noted={noted} removeNoted={removeNoted}/> 
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      );
+        // <Grid>
+        //   <Grid.Row>
+        //     <Grid.Column>
+        //       <NoteHeader handleLogout={handleLogout} user={user}/>
+        //     </Grid.Column>
+        //   </Grid.Row>
+        //   <Grid.Row >
+        //     <Grid.Column>
+        //       <ProfileBio user={userState} />
+        //     </Grid.Column>
+        //   </Grid.Row>
+        //   <Grid.Row >
+        //     <Grid.Column style={{ maxWidth: 750 }}>
+        //       <PostGallery notes={notes} itemsPerRow={3} isProfile={true} user={user} noted={noted} removeNoted={removeNoted}/> 
+        //     </Grid.Column>
+        //   </Grid.Row>
+        // </Grid>
 
+
+          <Grid centered >
+      <Grid.Row className="grid_b">
+        <Grid.Column>
+          <NoteHeader handleLogout={handleLogout} user={user}/>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row className="grid_b">
+        <Grid.Column style={{ maxWidth: 450 }}>
+
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row className="main_bod">
+        <Grid.Column style={{ maxWidth: 1050 }}>
+          <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  );
 
 
 

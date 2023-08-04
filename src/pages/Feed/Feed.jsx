@@ -70,24 +70,25 @@ export default function Feed({user, handleLogout}){
     }, [])
     
     
-    return(
-        <Grid centered >
-    <Grid.Row className="grid_bg">
-      <Grid.Column>
-        <NoteHeader handleLogout={handleLogout} user={user}/>
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row className="grid_bg">
-      <Grid.Column style={{ maxWidth: 450 }}>
-        <AddNote handleAddNote={handleAddNote} />
-      </Grid.Column>
-    </Grid.Row>
-    <Grid.Row className="main_body">
-      <Grid.Column style={{ maxWidth: 1050 }}>
-        <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
-      </Grid.Column>
-    </Grid.Row>
-  </Grid>
-);
+
+        return(
+            <Grid centered >
+        <Grid.Row className="grid_bg">
+          <Grid.Column>
+            <NoteHeader handleLogout={handleLogout} user={user}/>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row className="grid_bg">
+          <Grid.Column style={{ maxWidth: 450 }}>
+            <AddNote handleAddNote={handleAddNote} />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row className="main_body">
+          <Grid.Column style={{ maxWidth: 1050 }}>
+            <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    );
 
 }
