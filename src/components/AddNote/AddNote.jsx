@@ -38,6 +38,9 @@ export default function AddNote({handleAddNote}){
           <Form.Input
             className="form-control"
             name="noteTxt"
+            type="text"
+            maxLength= '163'
+            minLength= '32'
             value={state.noteTxt}
             placeholder="What's on your Note?"
             onChange={handleChange}

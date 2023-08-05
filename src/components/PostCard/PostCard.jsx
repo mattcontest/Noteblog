@@ -26,7 +26,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
     //Vice versa, if the user has not noted a post and clicked on it, we then have to call our noted function
     const clickHandler = notedIndex > -1 ? () => removeNoted(note.noted[notedIndex]._id) : () => noted(note._id);
     //Delete function
-    // const clickRemove =  () => removeNote(note._id);
+    const clickRemove =  () => removeNote(note._id);
 
     console.log(user.username, "username")
     console.log(note.user.username, "<---- note_user");
@@ -44,7 +44,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
         <Card.Content>
           {/* <Card.Header floated="right">{note.user.username}</Card.Header> */}
           <Card.Meta>Posted: { new Date(note.createdAt).toLocaleDateString()}</Card.Meta>
-          {/* {note.user.username === user.username ? <button onClick={clickRemove} >Delete</button> : null } */}
+          {note.user.username === user.username ? <button onClick={clickRemove} >Delete</button> : null }
           {/* <button onClick={clickRemove}>Delete</button> */}
          
         </Card.Content>

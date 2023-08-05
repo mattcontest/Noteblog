@@ -35,14 +35,20 @@
     justify-content: space-between;
 }
 
-.extra_space{
+/* .extra_space{
     border: solid;
     display: flex;
-    /* height: 20px; */;
     margin-bottom: 20px;
-}
+} */
 
 .delete_btn{
   border:solid seagreen;
   
 }
+
+/* Remove this if anything breaks */
+/* .content{
+  margin-top: 25px;
+  margin-left: -5px;
+
+} */
