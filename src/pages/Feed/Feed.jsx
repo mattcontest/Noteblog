@@ -44,6 +44,7 @@ export default function Feed({user, handleLogout}){
     async function removeNoted(notedId){
         try {
             const response = await notedApi.removeNoted(notedId);
+            //It is not always updating the state as expcted.
             getNotes();
         } catch (err) {
             setError('Problem removing Noted');
@@ -93,12 +94,12 @@ export default function Feed({user, handleLogout}){
           </Grid.Column>
         </Grid.Row>
         <Grid.Row className="grid_bg">
-          <Grid.Column style={{ maxWidth: 450 }}>
+          <Grid.Column style={{ maxWidth: 450,  minWidth: 400 }}>
             <AddNote handleAddNote={handleAddNote} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row className="main_body">
-          <Grid.Column style={{ maxWidth: 1050 }}>
+          <Grid.Column style={{ maxWidth: 1050, minWidth: 400 }}>
             <PostGallery notes={notes} itemsPerRow={4} isProfile={false} noted={noted} removeNoted={removeNoted} user={user} removeNote={removeNote} />
           </Grid.Column>
         </Grid.Row>

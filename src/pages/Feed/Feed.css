@@ -5,4 +5,5 @@
 
 .main_body{
     background-color: #dad5d2;
+    min-width: 2000px !important;
 }
