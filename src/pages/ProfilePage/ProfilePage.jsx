@@ -77,23 +77,6 @@ export default function ProfilePage({user, handleLogout}){
 
 
     return (
-        // <Grid>
-        //   <Grid.Row>
-        //     <Grid.Column>
-        //       <NoteHeader handleLogout={handleLogout} user={user}/>
-        //     </Grid.Column>
-        //   </Grid.Row>
-        //   <Grid.Row >
-        //     <Grid.Column>
-        //       <ProfileBio user={userState} />
-        //     </Grid.Column>
-        //   </Grid.Row>
-        //   <Grid.Row >
-        //     <Grid.Column style={{ maxWidth: 750 }}>
-        //       <PostGallery notes={notes} itemsPerRow={3} isProfile={true} user={user} noted={noted} removeNoted={removeNoted}/> 
-        //     </Grid.Column>
-        //   </Grid.Row>
-        // </Grid>
 
 
           <Grid centered >

@@ -1,6 +1,8 @@
 import { Card, Icon, Image } from "semantic-ui-react";
 import './PostCard.css'
-import { removeNote } from "../../utils/noteApi";
+// import { removeNote } from "../../utils/noteApi";
+import * as notedApi from "../../utils/notedApi"
+
 
 
 export default function PostCard({ note, isProfile, noted, removeNoted, user, removeNote}){
@@ -24,7 +26,15 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
     //Vice versa, if the user has not noted a post and clicked on it, we then have to call our noted function
     const clickHandler = notedIndex > -1 ? () => removeNoted(note.noted[notedIndex]._id) : () => noted(note._id);
     //Delete function
-    const clickRemove =  () => removeNote(note._id);
+    // const clickRemove =  () => removeNote(note._id);
+
+    console.log(user.username, "username")
+    console.log(note.user.username, "<---- note_user");
+    console.log(note._id, "<--note.user.username")
+    // console.log(note.user, "<--- note.user")
+    // console.log(user, "That's user")
+    // console.log(note.noted[0].username, "That's note")
+
 
 
     return(
@@ -34,7 +44,8 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
         <Card.Content>
           {/* <Card.Header floated="right">{note.user.username}</Card.Header> */}
           <Card.Meta>Posted: { new Date(note.createdAt).toLocaleDateString()}</Card.Meta>
-          <button onClick={clickRemove}>Delete</button>
+          {/* {note.user.username === user.username ? <button onClick={clickRemove} >Delete</button> : null } */}
+          {/* <button onClick={clickRemove}>Delete</button> */}
          
         </Card.Content>
         <Image src={`${note.photoUrl}`} wrapped ui={false}  className="NoteImg"  />
@@ -88,36 +99,6 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
       </Card>
 
 
-
-
-    //     <Card key={note._id}>
-        
-  
-    //     <Image src={`${note.photoUrl}`} wrapped ui={false} className="NoteImg" />
-    //     <Card.Content>
-    //       <Card.Description>{note.noteTxt}</Card.Description>
-    //     </Card.Content>
-    //     <Card.Content extra textAlign={"right"}>
-    //       <Icon name={"sticky note"} size="large" color={notedColor} onClick={clickHandler } />
-    //       {note.noted.length} Likes
-    //     </Card.Content>
-
-        // {isProfile ? null : (
-        //   <Card.Content textAlign="left">
-        //     <Image
-        //       floated="left"
-        //       size="large"
-        //       avatar
-        //       src={
-        //         note.user.photoUrl
-        //           ? note.user.photoUrl
-        //           : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-        //       }
-        //     />
-        //     <Card.Header floated="right">{note.user.username}</Card.Header>
-        //   </Card.Content>
-        // )}
-    //   </Card>
 
     );
 

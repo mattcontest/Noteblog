@@ -26,6 +26,9 @@ export default function Feed({user, handleLogout}){
         }
     }
 
+    //To get tested
+    //Delete function
+
     async function removeNote(noteId){
         try {
             const response = await noteApi.removeNote(noteId);
