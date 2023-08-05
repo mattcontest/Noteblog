@@ -4,7 +4,7 @@ import { Grid } from "semantic-ui-react";
 import ProfileBio from "../../components/ProfileBio/ProfileBio"
 import PostGallery from "../../components/PostGallery/PostGallery";
 import Header from "../../components/Header/Header"
-
+import "./ProfilePage.css"
 
 import userService from "../../utils/userService";
 
