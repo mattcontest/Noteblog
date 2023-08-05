@@ -10,7 +10,7 @@ const upload = multer();
 /*---------- Public Routes ----------*/
 router.post("/",  upload.single('photo'), notesCtrl.create);
 router.get("/", notesCtrl.index);
-router.delete("/:id", notesCtrl.removeNote)
+// router.delete("/:id", notesCtrl.removeNote)
 
 
 /*---------- Protected Routes ----------*/

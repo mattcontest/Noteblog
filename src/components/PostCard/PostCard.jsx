@@ -1,5 +1,6 @@
 import { Card, Icon, Image } from "semantic-ui-react";
 import './PostCard.css'
+import { Link } from "react-router-dom";
 // import { removeNote } from "../../utils/noteApi";
 import * as notedApi from "../../utils/notedApi"
 
@@ -81,7 +82,9 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
                 }
             />
             <Card.Content>
-            By @<b>{note.user.username}</b>
+            <b>By</b> <Link to={`/${note.user.username}`}>
+             @<b>{note.user.username}</b>
+            </Link>
 
             </Card.Content>
 
