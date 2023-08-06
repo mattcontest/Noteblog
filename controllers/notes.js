@@ -60,6 +60,7 @@ async function index(req, res){
 
   //Delete function
 async function removeNote(req,res){
+    console.log(req.params.id ,"<--- Testing with Hayk")
     try {
         const note = await Note.findOne({'_id' : req.params.id, "note.username" : req.user.username})
         if(note){

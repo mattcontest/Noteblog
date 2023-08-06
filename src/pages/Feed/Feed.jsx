@@ -26,6 +26,22 @@ export default function Feed({user, handleLogout}){
         }
     }
 
+    async function getNotes(){
+        try {
+            const responseFromTheServer = await noteApi.getAll();
+            console.log(responseFromTheServer);
+            // setNotes(responseFromTheServer.notes)
+            setNotes([...responseFromTheServer.notes])
+        } catch (err) {
+            console.log(err, "err in getNotes");
+            setError("Error in fetching Posts, Check terminal")
+        }
+    }
+    
+    useEffect( () => {
+        getNotes()
+    }, [])
+
     //To get tested
     //Delete function
 
@@ -68,21 +84,7 @@ export default function Feed({user, handleLogout}){
     }
     
     
-    async function getNotes(){
-        try {
-            const responseFromTheServer = await noteApi.getAll();
-            console.log(responseFromTheServer);
-            // setNotes(responseFromTheServer.notes)
-            setNotes(responseFromTheServer.notes)
-        } catch (err) {
-            console.log(err, "err in getNotes");
-            setError("Error in fetching Posts, Check terminal")
-        }
-    }
-    
-    useEffect( () => {
-        getNotes()
-    }, [])
+
     
     
 

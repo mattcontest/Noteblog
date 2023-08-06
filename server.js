@@ -29,8 +29,8 @@ app.use(require("./config/auth"));
 app.use("/api/users", userRouter)
 //This was changed with the above line using userRouter
 // app.use("/api/users", require("./routes/api/users"));
+// app.use('/api/liked', notedRouter);
 app.use('/api/notes', noteRouter);
-app.use('/api', notedRouter);
 
 // "catch all" route
 app.get('/*', function(req, res) {

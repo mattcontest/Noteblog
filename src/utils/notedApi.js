@@ -1,12 +1,13 @@
 import tokenService from "./tokenService";
 
-const BASE_URL = "/api/"
+const BASE_URL = "/api/notes/liked/"
 
 export function create(noteId){
-    return fetch(`${BASE_URL}notes/${noteId}/noted`,{
+    return fetch(`${BASE_URL}${noteId}`,{
         method: 'POST',
         headers:{
-            Authorization: "Bearer " + tokenService.getToken()
+            Authorization: "Bearer " + tokenService.getToken(),
+            'Content-Type': 'application/json',
         }
     }).then(responseFromTheServer => {
         if(responseFromTheServer.ok) return responseFromTheServer.json();
@@ -19,10 +20,12 @@ export function create(noteId){
 export function removeNoted(notedId){
     console.log("We get inside but nothing more than that")
     console.log(notedId, " <--- notedId")
-    return fetch(`${BASE_URL}notes/${notedId}`, {
+    return fetch(`${BASE_URL}${notedId}`, {
         method: 'DELETE',
         headers: {
-            Authorization: "Bearer " + tokenService.getToken()
+            Authorization: "Bearer " + tokenService.getToken(),
+            'Content-Type': 'application/json',
+
 
         }
     }).then(responseFromTheServer => {

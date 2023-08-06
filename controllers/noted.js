@@ -1,4 +1,5 @@
 const Note = require('../models/note');
+console.log("Accessing the noted.js controller")
 
 
 module.exports = {create, removeNoted};
@@ -17,6 +18,7 @@ async function create(req,res){
 
 async function removeNoted(req,res){
     try {
+        console.log("Is it reached? W/ Hayk");
         const note = await Note.findOne({'noted._id' : req.params.id, "noted.username" : req.user.username});
         note.noted.remove(req.params.id); //Mutating a document
         await note.save();
