@@ -13,8 +13,8 @@ router.post("/",  upload.single('photo'), notesCtrl.create);
 router.get("/", notesCtrl.index);
 router.delete("/:id", notesCtrl.removeNote)
 
-router.post('/liked/:id', notedCtrl.create);
-router.delete('/liked/:id', notedCtrl.removeNoted);
+router.post('/noted/:id', notedCtrl.create);
+router.delete('/noted/:id', notedCtrl.removeNoted);
 
 
 

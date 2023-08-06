@@ -1,6 +1,6 @@
 import tokenService from "./tokenService";
 
-const BASE_URL = "/api/notes/liked/"
+const BASE_URL = "/api/notes/noted/"
 
 export function create(noteId){
     return fetch(`${BASE_URL}${noteId}`,{
