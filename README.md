@@ -40,24 +40,28 @@
 
 ## Current MVP
 <p align="center">
+
+<p>Login</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/21mkcpD.png">
 </p>
 
-<img width="800" alt="Current MVP" src="https://i.imgur.com/21mkcpD.png">
-</p>
-
+<p>Signup</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/7cgUUXY.png">
 </p>
 
+<p>Feedpage</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/N6XqdFA.png">
 </p>
 
+<p>Note Posting displayed</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/VrIyB3G.png">
 </p>
 
+<p>Noteblog Profile Page</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/qd7obK0.png">
 </p>
 
+<p>Noteblog Note Post</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/qQs0S3c.png">
 </p>
 
