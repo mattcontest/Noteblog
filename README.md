@@ -1,7 +1,7 @@
 <h1> Noteblog </h1>
 
 <p align="center">
-<img width="800" alt="AIDB"  src="https://i.imgur.com/ds0FwWM.png">
+<img width="800" alt="AIDB"  src="https://i.imgur.com/4lOGpt8.png">
 </p>
 
 <h4>Noteblog is a sophisticated, user-friendly note-sharing platform that leverages state-of-the-art technologies such as Express, React, Vite, Semantic React UI, Mongoose, MongoDB, JavaScript, CSS, and HTML. This application is designed to make the process of creating, managing, and sharing notes simple, interactive, and enjoyable. </h4>
@@ -11,6 +11,7 @@
 - **User Account Creation**: Users can create their own account using email and password. 
 - **User Profiles**: Users can upload their avatar picture and include a bio visible on their personal profile.
 - **Note Posting**: Users can post notes consisting of a text and an accompanying picture.
+- **Note Deletion**: Users can delete their notes whether it is in the Noteblog feedpage or their profiles as they wish.
 - **Note Appreciation**: Users can show appreciation for notes by clicking the sticky note button at the end of each post. The most appreciated notes are displayed prominently.
 - **Note Structure**: Each note is structured with a date at the top, followed by the image and the note text. User avatar, username (linking to user's profile), and sticky note button for upvoting are lined up at the bottom.
 - **Word Limit**: Each note has a maximum limit of 200 words.
@@ -36,6 +37,21 @@
 - **JavaScript**: The main programming language used for building the app.
 - **CSS**: Used for styling the components of the app.
 - **HTML**: Markup language for structuring the front-end of the app.
+
+## ERD
+<p align="center">
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/b3JqPeV.png">
+</p>
+
+
+## Original Wireframe
+<p align="center">
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/yjcOifn.png">
+</p>
+
+
 
 
 ## Current MVP
@@ -65,6 +81,9 @@
 <img width="800" alt="Current MVP" src="https://i.imgur.com/qQs0S3c.png">
 </p>
 
+<p>Note Deletion</p>
+<img width="800" alt="Current MVP" src="https://i.imgur.com/3ZnPqky.png">
+</p>
 
 ## Setup and Installation
 
