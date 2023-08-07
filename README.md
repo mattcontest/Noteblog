@@ -1,7 +1,7 @@
 <h1> Noteblog </h1>
 
 <p align="center">
-<img width="800" alt="AIDB"  src="https://i.imgur.com/4lOGpt8.png">
+<img width="800" alt="AIDB"  src="https://i.imgur.com/3S95hgl.png">
 </p>
 
 <h4>Noteblog is a sophisticated, user-friendly note-sharing platform that leverages state-of-the-art technologies such as Express, React, Vite, Semantic React UI, Mongoose, MongoDB, JavaScript, CSS, and HTML. This application is designed to make the process of creating, managing, and sharing notes simple, interactive, and enjoyable. </h4>
