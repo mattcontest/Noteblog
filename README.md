@@ -7,7 +7,6 @@
 <h4>Noteblog is a sophisticated, user-friendly note-sharing platform that leverages state-of-the-art technologies such as Express, React, Vite, Semantic React UI, Mongoose, MongoDB, JavaScript, CSS, and HTML. This application is designed to make the process of creating, managing, and sharing notes simple, interactive, and enjoyable. </h4>
 
 ## Features
-<h3><b>Features:</b></h3>
 
 - **User Account Creation**: Users can create their own account using email and password. 
 - **User Profiles**: Users can upload their avatar picture and include a bio visible on their personal profile.
@@ -18,6 +17,16 @@
 
 ## Tech Stack
 
+<h3><b>Tech Stack:</b></h3>
+<ul>
+<li>Mongoose</li>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>Semantic React UI</li>
+<li>Javascript</li>
+<li>MongoDB</li>
+</ul>
+
 - **React.js**: A JavaScript library used for building user interfaces.
 - **Vite**: A next-generation frontend build tool.
 - **Semantic React UI**: A UI library offering pre-built, stylized components for faster development.
@@ -27,6 +36,31 @@
 - **JavaScript**: The main programming language used for building the app.
 - **CSS**: Used for styling the components of the app.
 - **HTML**: Markup language for structuring the front-end of the app.
+
+
+## Current MVP
+<p align="center">
+<img width="800" alt="Current MVP" src="https://i.imgur.com/21mkcpD.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/21mkcpD.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/7cgUUXY.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/N6XqdFA.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/VrIyB3G.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/qd7obK0.png">
+</p>
+
+<img width="800" alt="Current MVP" src="https://i.imgur.com/qQs0S3c.png">
+</p>
+
 
 ## Setup and Installation
 
