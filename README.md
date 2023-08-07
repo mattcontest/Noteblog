@@ -1,0 +1,40 @@
+<h1> Noteblog </h1>
+
+<p align="center">
+<img width="800" alt="AIDB"  src="https://i.imgur.com/ds0FwWM.png">
+</p>
+
+<h4>Noteblog is a sophisticated, user-friendly note-sharing platform that leverages state-of-the-art technologies such as Express, React, Vite, Semantic React UI, Mongoose, MongoDB, JavaScript, CSS, and HTML. This application is designed to make the process of creating, managing, and sharing notes simple, interactive, and enjoyable. </h4>
+
+## Features
+<h3><b>Features:</b></h3>
+
+- **User Account Creation**: Users can create their own account using email and password. 
+- **User Profiles**: Users can upload their avatar picture and include a bio visible on their personal profile.
+- **Note Posting**: Users can post notes consisting of a text and an accompanying picture.
+- **Note Appreciation**: Users can show appreciation for notes by clicking the sticky note button at the end of each post. The most appreciated notes are displayed prominently.
+- **Note Structure**: Each note is structured with a date at the top, followed by the image and the note text. User avatar, username (linking to user's profile), and sticky note button for upvoting are lined up at the bottom.
+- **Word Limit**: Each note has a maximum limit of 200 words.
+
+## Tech Stack
+
+- **React.js**: A JavaScript library used for building user interfaces.
+- **Vite**: A next-generation frontend build tool.
+- **Semantic React UI**: A UI library offering pre-built, stylized components for faster development.
+- **Express.js**: A back-end web application framework for Node.js, used to build the API.
+- **Mongoose**: An Object Data Modeling (ODM) library that manages relationships between data and provides schema validation.
+- **MongoDB**: A flexible, scalable database program.
+- **JavaScript**: The main programming language used for building the app.
+- **CSS**: Used for styling the components of the app.
+- **HTML**: Markup language for structuring the front-end of the app.
+
+## Setup and Installation
+
+### Prerequisites
+
+Make sure you have the following software installed on your local machine:
+
+- [NodeJS](https://nodejs.org/en/download/)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+- [Git](https://git-scm.com/downloads)
+
