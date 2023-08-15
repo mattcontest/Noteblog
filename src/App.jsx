@@ -7,6 +7,7 @@ import Feed from "./pages/Feed/Feed";
 import { useState } from "react";
 import userService from "./utils/userService";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import Notfound from "./pages/NotFound/Notfound";
 
 
 function App() {
@@ -40,14 +41,16 @@ function App() {
     )
   }
 
+      {/* <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
+      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>}/> */}
 
   return (
     <Routes>
       <Route path="/" element={<Feed user={user} handleSignUpOrLogin={handleSignUpOrLogin} handleLogout={handleLogout}/>} />
-      <Route path="/login" element={<LoginPage handleSignUpOrLogin={handleSignUpOrLogin} />} />
-      <Route path="/signup" element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin}/>}/>
+      <Route  path="/*" element={<Notfound/>}/>
       <Route path="/:username" element={<ProfilePage user={user} handleLogout={handleLogout} />}/>
-      <Route path="/*" element={<Navigate to="/"/>}/>
+      <Route path="/404" element={<Notfound/>}/>
+      {/* <Route path="/*" element={<Navigate to="/"/>}/> */}
     </Routes>
   );
 }

@@ -55,10 +55,30 @@ function getProfile(username){
   })
 }
 
+async function checkUsername(username){
+  try {
+    const response = await fetch(`${BASE_URL}${username}`,{
+      method: 'GET',
+      headers:{
+        Authorization: "Bearer " + tokenService.getToken()
+      }
+    });
+
+    return response.ok;
+    
+  } catch (err) {
+    console.error("User Profile Not Found", err);
+    return -1;
+    
+  }
+
+}
+
 export default {
   signup, 
   getUser,
   logout,
   login,
-  getProfile
+  getProfile,
+  checkUsername
 };

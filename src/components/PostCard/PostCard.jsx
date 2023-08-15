@@ -32,9 +32,7 @@ export default function PostCard({ note, isProfile, noted, removeNoted, user, re
     console.log(user.username, "username")
     console.log(note.user.username, "<---- note_user");
     console.log(note._id, "<--note.user.username")
-    // console.log(note.user, "<--- note.user")
-    // console.log(user, "That's user")
-    // console.log(note.noted[0].username, "That's note")
+
 
 
 
