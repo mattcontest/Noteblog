@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Button, Dropdown, Menu, Image} from 'semantic-ui-react'
+import { Button, Dropdown, Menu, Image, Icon} from 'semantic-ui-react'
 import { Navigate, useNavigate, Link } from 'react-router-dom';
 import './Header.css'
 
@@ -8,6 +8,7 @@ export default class NoteHeader extends Component {
   state = { activeItem: 'home' }
 
   // handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
 
   
   render() {
@@ -21,7 +22,7 @@ export default class NoteHeader extends Component {
         <Menu.Item
           name='home'>
              {/* <Link to={`/${user?.username}`}> */}
-             <Link to="/">
+             <Link to={`/${user?.username}`}>
 
             <Image id='avatar'
               src={
@@ -39,12 +40,29 @@ export default class NoteHeader extends Component {
 
 
 
-    <Menu.Item className='my_notes'>
-        <Link to={`/${user?.username}`}>
-            <h1 id="mynotes">@</h1>
+    {/* <Menu.Item className='my_notes'>
+        <Link to={`/${user?.username}`}> */}
+            {/* <h1 id="mynotes">@</h1> */}
+
+              {/* <Icon name='user' size='big'/> */}
+{/* 
           </Link>
           
            </Menu.Item>
+     */}
+    <Menu.Item>
+      <Link to ={`/bookmark`}>
+        <Icon name='bookmark' size='big'/>
+      </Link>
+
+    </Menu.Item>
+
+    <Menu.Item>
+      <Link to ={`/inbox`}>
+        <Icon name='inbox' size='big'/>
+      </Link>
+
+    </Menu.Item>
 
 
 
