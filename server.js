@@ -32,6 +32,9 @@ app.use("/api/users", userRouter)
 // app.use('/api/liked', notedRouter);
 app.use('/api/notes', noteRouter);
 
+
+app.set('view engine', 'ejs');
+
 // "catch all" route
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
