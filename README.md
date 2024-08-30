@@ -84,7 +84,11 @@
 <img width="800" alt="Current MVP" src="https://i.imgur.com/3ZnPqky.png">
 </p>
 
-<div style="position: relative; padding-bottom: 92.15017064846415%; height: 0;"><iframe src="https://www.loom.com/embed/d1fc643514cc4006b6fd28baad1872a6?sid=e60d8f2e-b741-4735-be59-16c7c1142c45" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<p>Noteblog Live Demo</p>
+
+[![Noteblog - 30 August 2024 - Watch Video](https://cdn.loom.com/sessions/thumbnails/d1fc643514cc4006b6fd28baad1872a6-61600e4b22e841c0-full-play.gif)](https://www.loom.com/share/d1fc643514cc4006b6fd28baad1872a6)
+
+</p>
 
 ## Setup and Installation
 
