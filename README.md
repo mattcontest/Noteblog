@@ -8,7 +8,7 @@
 
 ## Features
 
-- **User Account Creation**: Users can create their own account using email and password. 
+- **User Account Creation**: Users can create their own account using email and password.
 - **User Profiles**: Users can upload their avatar picture and include a bio visible on their personal profile.
 - **Note Posting**: Users can post notes consisting of a text and an accompanying picture.
 - **Note Deletion**: Users can delete their notes whether it is in the Noteblog feedpage or their profiles as they wish.
@@ -39,22 +39,21 @@
 - **HTML**: Markup language for structuring the front-end of the app.
 
 ## ERD
+
 <p align="center">
 
 <img width="800" alt="Current MVP" src="https://i.imgur.com/b3JqPeV.png">
 </p>
 
-
 ## Original Wireframe
+
 <p align="center">
 
 <img width="800" alt="Current MVP" src="https://i.imgur.com/yjcOifn.png">
 </p>
 
-
-
-
 ## Current MVP
+
 <p align="center">
 
 <p>Login</p>
@@ -85,6 +84,8 @@
 <img width="800" alt="Current MVP" src="https://i.imgur.com/3ZnPqky.png">
 </p>
 
+<div style="position: relative; padding-bottom: 92.15017064846415%; height: 0;"><iframe src="https://www.loom.com/embed/d1fc643514cc4006b6fd28baad1872a6?sid=e60d8f2e-b741-4735-be59-16c7c1142c45" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## Setup and Installation
 
 ### Prerequisites
@@ -94,4 +95,3 @@ Make sure you have the following software installed on your local machine:
 - [NodeJS](https://nodejs.org/en/download/)
 - [MongoDB](https://www.mongodb.com/try/download/community)
 - [Git](https://git-scm.com/downloads)
-
