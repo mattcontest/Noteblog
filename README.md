@@ -42,7 +42,7 @@
 
 <p align="center">
 
-<img width="800" alt="Current MVP" src="https://i.imgur.com/b3JqPeV.png">
+<img width="800" alt="Current MVP" src="https://i.imgur.com/hRyqAnu.png">
 </p>
 
 ## Original Wireframe
