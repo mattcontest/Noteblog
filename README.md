@@ -85,8 +85,11 @@
 </p>
 
 <p align="center">Noteblog Live Demo</p>
+<div align="center">
 
 [![Noteblog - 30 August 2024 - Watch Video](https://cdn.loom.com/sessions/thumbnails/d1fc643514cc4006b6fd28baad1872a6-61600e4b22e841c0-full-play.gif)](https://www.loom.com/share/d1fc643514cc4006b6fd28baad1872a6)
+
+</div>
 
 </p>
 
