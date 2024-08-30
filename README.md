@@ -56,20 +56,17 @@
 
 <p align="center">
 
-<p>Login</p>
-<img width="800" alt="Current MVP" src="https://i.imgur.com/21mkcpD.png">
-</p>
+<p align="center">Noteblog Live Demo</p>
+<div align="center">
 
-<p>Signup</p>
-<img width="800" alt="Current MVP" src="https://i.imgur.com/7cgUUXY.png">
+[![Noteblog - 30 August 2024 - Watch Video](https://cdn.loom.com/sessions/thumbnails/d1fc643514cc4006b6fd28baad1872a6-61600e4b22e841c0-full-play.gif)](https://www.loom.com/share/d1fc643514cc4006b6fd28baad1872a6)
+
+</div>
+
 </p>
 
 <p>Feedpage</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/N6XqdFA.png">
-</p>
-
-<p>Note Posting displayed</p>
-<img width="800" alt="Current MVP" src="https://i.imgur.com/VrIyB3G.png">
 </p>
 
 <p>Noteblog Profile Page</p>
@@ -83,13 +80,6 @@
 <p>Note Deletion</p>
 <img width="800" alt="Current MVP" src="https://i.imgur.com/3ZnPqky.png">
 </p>
-
-<p align="center">Noteblog Live Demo</p>
-<div align="center">
-
-[![Noteblog - 30 August 2024 - Watch Video](https://cdn.loom.com/sessions/thumbnails/d1fc643514cc4006b6fd28baad1872a6-61600e4b22e841c0-full-play.gif)](https://www.loom.com/share/d1fc643514cc4006b6fd28baad1872a6)
-
-</div>
 
 </p>
 
